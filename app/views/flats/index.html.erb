@@ -1,0 +1,15 @@
+<div class="d-flex justify-content-center m-5"><h1>London Flats</h1></div>
+<div class="d-flex justify-content-center">
+  <% @flats.each do |flat| %>
+    <div class="card mx-3" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= flat.name %></h5>
+        <h6 class="card-subtitle mb-2 text-muted"><%= flat.address %></h6>
+        <p class="card-text"><%= "🧍‍♀️ #{flat.number_of_guests}" %> <%= "#{flat.price_per_night}€" %></p>
+        <%= link_to 'More info', flat_path(flat) %>
+        <a href="#" class="card-link">Edit</a>
+        <a href="#" class="card-link">Remove</a>
+      </div>
+    </div>
+  <% end %>
+</div>
